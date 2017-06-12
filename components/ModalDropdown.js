@@ -350,10 +350,10 @@ export default class ModalDropdown extends Component {
     if (!this.props.onSelect ||
       this.props.onSelect(rowID, rowData) !== false) {
       highlightRow(sectionID, rowID);
-      this._nextValue = rowData;
+      this._nextValue = rowData.name;
       this._nextIndex = rowID;
       this.setState({
-        buttonText: rowData.toString(),
+        buttonText: rowData.name,
         selectedIndex: rowID
       });
     }
